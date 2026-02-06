@@ -18,10 +18,11 @@ st.markdown("""
     footer {visibility: hidden;}
     header {visibility: hidden;}
     
+    /* Perbaikan Gradasi Sidebar agar tidak kontras */
     [data-testid="stSidebar"] {
-        background-image: linear-gradient(#ffffff, #e3f2fd);
+        background-image: linear-gradient(to bottom, rgba(26, 115, 232, 0.1), rgba(0, 0, 0, 0));
     }
-    /* Membuat tombol hapus terlihat lebih mencolok */
+    
     .stButton button {
         width: 100%;
         border-radius: 10px;
@@ -43,7 +44,6 @@ with st.sidebar:
     st.write("🔹 **Cek Paham**: Pertanyaan interaktif di akhir.")
     
     st.write("---")
-    # Bagian menu yang bisa dibuka-tutup (slide down)
     with st.expander("🗑️ Bersihkan Percakapan", expanded=False):
         st.write("Tindakan ini akan menghapus seluruh percakapan saat ini.")
         if st.button("Hapus Semua Riwayat", type="primary"):
