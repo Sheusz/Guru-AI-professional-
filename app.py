@@ -49,8 +49,7 @@ st.caption("Belajar apapun, kapanpun, tanpa pusing.")
 
 model = genai.GenerativeModel(
     model_name="gemini-2.5-flash",
-    system_instruction="Kamu adalah Guru AI Elite. Tugasmu: 1. Berikan rangkuman materi yang sangat padat. 2. Gunakan satu analogi dunia nyata yang unik. 3. Gunakan bahasa yang santai tapi sopan. 4. Berikan satu pertanyaan tantangan di akhir jawaban untuk menguji pemahaman pengguna."
-)
+    system_instruction="Kamu adalah Guru Professional. Jelaskan materi dengan sangat mudah, ringkas, dan singkat."
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
