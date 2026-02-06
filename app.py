@@ -49,7 +49,7 @@ st.caption("Belajar apapun, kapanpun, tanpa pusing.")
 
 model = genai.GenerativeModel(
     model_name="gemini-2.5-flash",
-    system_instruction="Kamu adalah Guru Professional. Jelaskan materi dengan sangat mudah, ringkas, dan singkat."
+    system_instruction="Kamu adalah Guru Professional. Jelaskan materi dengan sangat mudah, ringkas, dan singkat.")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
