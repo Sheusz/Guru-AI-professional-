@@ -25,7 +25,7 @@ st.markdown("""
         background-image: linear-gradient(#ffffff, #e3f2fd);
     }
     </style>
-    """, unsafe_allow_config=True)
+    """, unsafe_allow_html=True)
 
 if "GOOGLE_API_KEY" not in st.secrets:
     st.error("Konfigurasi API Key diperlukan di bagian Secrets.")
