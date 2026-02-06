@@ -21,6 +21,11 @@ st.markdown("""
     [data-testid="stSidebar"] {
         background-image: linear-gradient(#ffffff, #e3f2fd);
     }
+    /* Membuat tombol hapus terlihat lebih mencolok */
+    .stButton button {
+        width: 100%;
+        border-radius: 10px;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -37,9 +42,11 @@ with st.sidebar:
     st.write("🔹 **Analogi Cerdas**: Penjelasan lewat perumpamaan.")
     st.write("🔹 **Cek Paham**: Pertanyaan interaktif di akhir.")
     
-    with st.expander("Pengaturan Riwayat"):
-        st.write("Klik tombol di bawah untuk membersihkan percakapan.")
-        if st.button("Hapus Riwayat Belajar"):
+    st.write("---")
+    # Bagian menu yang bisa dibuka-tutup (slide down)
+    with st.expander("🗑️ Bersihkan Percakapan", expanded=False):
+        st.write("Tindakan ini akan menghapus seluruh percakapan saat ini.")
+        if st.button("Hapus Semua Riwayat", type="primary"):
             st.session_state.messages = []
             st.rerun()
 
