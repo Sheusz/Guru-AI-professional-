@@ -9,18 +9,15 @@ st.set_page_config(
 
 st.markdown("""
     <style>
-    /* Desain Chat Bubble yang lebih modern */
     .stChatMessage {
         border-radius: 20px;
         padding: 15px;
         margin-bottom: 10px;
     }
-    /* Menghilangkan menu default streamlit untuk tampilan bersih */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
     
-    /* Warna Gradasi untuk Sidebar */
     [data-testid="stSidebar"] {
         background-image: linear-gradient(#ffffff, #e3f2fd);
     }
@@ -40,9 +37,11 @@ with st.sidebar:
     st.write("🔹 **Analogi Cerdas**: Penjelasan lewat perumpamaan.")
     st.write("🔹 **Cek Paham**: Pertanyaan interaktif di akhir.")
     
-    if st.button("Hapus Riwayat Belajar"):
-        st.session_state.messages = []
-        st.rerun()
+    with st.expander("Pengaturan Riwayat"):
+        st.write("Klik tombol di bawah untuk membersihkan percakapan.")
+        if st.button("Hapus Riwayat Belajar"):
+            st.session_state.messages = []
+            st.rerun()
 
 st.title("Selamat Datang di Kelas AI")
 st.caption("Belajar apapun, kapanpun, tanpa pusing.")
